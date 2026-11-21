@@ -1,0 +1,30 @@
+{
+  "name": "emberfall-shardbound",
+  "version": "1.0.0",
+  "description": "Emberfall: Shardbound — 3D open-world card RPG with regional multiplayer servers",
+  "main": "electron/main.js",
+  "author": "Emberfall",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "server": "node server.js",
+    "app": "electron .",
+    "dist": "electron-builder",
+    "dist:win": "electron-builder --win",
+    "dist:mac": "electron-builder --mac",
+    "dist:linux": "electron-builder --linux"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.emberfall.shardbound",
+    "productName": "Emberfall",
+    "icon": "electron/icon.png",
+    "files": ["electron/**", "server.js", "public/**", "package.json"],
+    "win": { "target": "nsis" },
+    "mac": { "target": "dmg", "category": "public.app-category.games" },
+    "linux": { "target": "AppImage", "category": "Game" }
+  }
+}

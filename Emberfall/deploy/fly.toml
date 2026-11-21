@@ -1,0 +1,18 @@
+# Template for ONE regional server on Fly.io. Copy per region and edit app / primary_region / REGION_*.
+app = "REPLACE-WITH-UNIQUE-NAME"
+primary_region = "sin"          # sin=Singapore  syd=Sydney  fra=Frankfurt  iad=Virginia  gru=São Paulo  jnb=Johannesburg
+
+[build]
+
+[env]
+  PORT = "8080"
+  REGION_NAME = "Asia"
+  REGION_ID = "asia"
+  MAX_PLAYERS = "64"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "off"     # keep the world alive
+  auto_start_machines = true
+  min_machines_running = 1       # exactly ONE machine per region: everyone on a server must share the same process

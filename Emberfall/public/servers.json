@@ -1,0 +1,11 @@
+{
+  "_comment": "One entry per regional server. 'url' is where you deployed server.js for that region (https://… or wss://…). Unreachable entries show as Offline in the game.",
+  "servers": [
+    { "id": "asia",    "name": "Asia",                 "emoji": "🌏", "url": "https://emberfall-asia.example.com" },
+    { "id": "oceania", "name": "Australia & Oceania",  "emoji": "🦘", "url": "https://emberfall-oceania.example.com" },
+    { "id": "europe",  "name": "Europe",               "emoji": "🌍", "url": "https://emberfall-europe.example.com" },
+    { "id": "na",      "name": "North America",        "emoji": "🗽", "url": "https://emberfall-na.example.com" },
+    { "id": "sa",      "name": "South America",        "emoji": "🌎", "url": "https://emberfall-sa.example.com" },
+    { "id": "africa",  "name": "Africa",               "emoji": "🦁", "url": "https://emberfall-africa.example.com" }
+  ]
+}
